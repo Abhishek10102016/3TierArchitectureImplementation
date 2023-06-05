@@ -18,5 +18,10 @@ namespace BusinessLayer
         {
             return _context.Employees.ToList();
         }
+        public void addEmployee(Employee employee)
+        {
+            _context.Employees.Add(employee);
+            _context.SaveChanges();
+        }
     }
 }

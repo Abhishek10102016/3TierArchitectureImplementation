@@ -11,10 +11,12 @@ namespace Entities
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Employee
     {
         public int Id { get; set; }
+        [Required(ErrorMessage ="Name is Required")]
         public string Name { get; set; }
     }
 }

@@ -18,5 +18,22 @@ namespace PresentationLayer.Controllers
             List<Employee> employeeName = employee.namesDetail();
             return View(employeeName);
         }
+        public ActionResult New()
+        {
+            return View();
+        }
+        public ActionResult Save(Employee employee)
+        {
+            if(!ModelState.IsValid)
+            {
+                return View("New");
+            }
+            else
+            {
+                var newEmployee = new ClassBLL();
+                newEmployee.addEmployee(employee);
+            }
+            return RedirectToAction("Index", "EmployeeDetails");
+        }
     }
 }

@@ -51,6 +51,7 @@
     <Compile Include="Employee.cs">
       <DependentUpon>EntitiesModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="employeePartialClass.cs" />
     <Compile Include="EntitiesModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
